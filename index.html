@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="js/script.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>v.IHLE.niť - úvodná stránka</title>
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="images/favicon_needle.png"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><img
+            src="images/logo_noBckg_white_small.png"
+            alt="Logo v.IHLE.niť"
+            title="Logo v.IHLE.niť"
+        /></a>
+      </div>
+
+      <nav id="navigation" class="menu">
+        <a href="#!" class="icon" onclick="MenuClick()"
+          ><img
+            src="images/menu_icon_white.svg"
+            alt="Obrázok ikony pre menu"
+            width="24"
+            height="24"
+        /></a>
+        <a href="#moje_vyrobky" title="Ponuka mojich výrobkov">Moje výrobky</a>
+        <a href="#referencie" title="Hodnotenia kupujúcich">Referencie</a>
+        <a href="#benefity" title="Výhody pre kupujúcich">Benefity</a>
+        <a href="#o_mne" title="Zopár info o mne :)">O mne</a>
+        <a href="#kontakt" title="Kontaktné údaje">Kontakt</a>
+      </nav>
+
+      <div id="round_buttons">
+        <div id="open-search-btn" class="OpenSearchBtn" onclick="openSearch()">
+          <img
+            src="images/search_icon.svg"
+            alt="Obrázok ikony pre vyhľadávanie"
+            title="Vyhľadať"
+            width="23"
+            height="23"
+          />
+        </div>
+
+        <div id="myOverlay" class="overlay">
+          <span
+            class="closebtn"
+            onclick="closeSearch()"
+            title="Zatvoriť vyhľadávanie"
+            >×</span
+          >
+          <div class="overlay-content">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Hľadať.." name="search" />
+              <button type="submit">
+                <img
+                  src="images/search_icon1.svg"
+                  alt="Obrázok ikony pre vyhľadávanie"
+                  title="Vyhľadať"
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div id="dmpic" onclick="darkMode(), imageChange()">
+          <img
+            id="dark-mode-pic"
+            src="images/dark_mode_black_24dp.png"
+            alt="Obrázok prepínania na tmavý motív"
+            title="Prepnúť na tmavý motív"
+            width="25"
+            height="25"
+          />
+        </div>
+      </div>
+      <div class="extLinks">
+        <a
+          href="https://www.sashe.sk/v.IHLE.nit"
+          target="_blank"
+          title="Ísť na moje výrobky na Sashe"
+          ><img
+            src="images/sashe_logo_alt1.png"
+            alt="Link na sashe stránku v.IHLE.niť"
+        /></a>
+        <a
+          href="https://www.facebook.com/v.IHLE.nit"
+          target="_blank"
+          title="Ísť na moju facebook stránku"
+          ><img
+            src="images/f_icon.png"
+            alt="Link na facebook stránku v.IHLE.niť"
+            width="40"
+            height="40"
+        /></a>
+        <a
+          href="https://www.instagram.com/v.ihle.nit/"
+          target="_blank"
+          title="Ísť na moju instagram stránku"
+          ><img
+            src="images/insta_icon.png"
+            alt="Link na instagram stránku v.IHLE.niť"
+            width="40"
+            height="40"
+        /></a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div id="moje_vyrobky">
+          <h1>Moje výrobky - ukážka z tvorby</h1>
+          <div class="gallery">
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSlide(1)"
+                class="hover-shadow"
+                src="images/products/vsetkovrecko_bodky_small.JPG"
+                alt="Všetkovrecko Pastelové bodky - náhľad"
+              />
+              <div class="description">Všetkovrecko Pastelové bodky</div>
+            </div>
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSlide(2)"
+                class="hover-shadow"
+                src="images/products/vsetkovrecko_vlocky_small.JPG"
+                alt="Všetkovrecko Vianočné vločky - náhľad"
+              />
+              <div class="description">Všetkovrecko Vianočné vločky</div>
+            </div>
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSlide(3)"
+                class="hover-shadow"
+                src="images/products/vsetkovrecko_zvieratka_small.JPG"
+                alt="Všetkovrecko Lesné zvieratká - náhľad"
+              />
+              <div class="description">Všetkovrecko Lesné zvieratká</div>
+            </div>
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSlide(4)"
+                class="hover-shadow"
+                src="images/products/xmas_domceky_small.JPG"
+                alt="Vianočné ozdoby Domčeky - náhľad"
+              />
+              <div class="description">Vianočné ozdoby Domčeky</div>
+            </div>
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSlide(5)"
+                class="hover-shadow"
+                src="images/products/vsetkovrecko_bw_small.jpg"
+                alt="Všetkovrecko Black&White - náhľad"
+              />
+              <div class="description">Všetkovrecko Black&White</div>
+            </div>
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSlide(6)"
+                class="hover-shadow"
+                src="images/products/vrecka_na_chlieb_small.JPG"
+                alt="Vrecká na chlieb Ľanové - náhľad"
+              />
+              <div class="description">Vrecká na chlieb Ľanové</div>
+            </div>
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSuegrlide(7)"
+                class="hover-shadow"
+                src="images/products/hnede_mandaly_11cm_small.JPG"
+                alt="Meditačný vankúš Hnedé mandaly - náhľad"
+              />
+              <div class="description">Meditačný vankúš Hnedé mandaly</div>
+            </div>
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSlide(8)"
+                class="hover-shadow"
+                src="images/products/bluegreen_2_small.JPG"
+                alt="Meditačný vankúš Bluegreen - náhľad"
+              />
+              <div class="description">Meditačný vankúš Bluegreen</div>
+            </div>
+            <div class="gal-image">
+              <img
+                onclick="openModal();currentSlide(9)"
+                class="hover-shadow"
+                src="images/products/retro_mandala_small.JPG"
+                alt="Meditačný vankúš Retro mandala - náhľad"
+              />
+              <div class="description">Meditačný vankúš Retro mandala</div>
+            </div>
+          </div>
+
+          <!-- The Modal/Lightbox -->
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">1 / 9</div>
+                <img
+                  src="images/products/vsetkovrecko_bodky_big.JPG"
+                  style="width: 100%"
+                  alt="Všetkovrecko Pastelové bodky"
+                />
+              </div>
+
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">2 / 9</div>
+                <img
+                  src="images/products/vsetkovrecko_vlocky_big.JPG"
+                  style="width: 100%"
+                  alt="Všetkovrecko Vianočné vločky"
+                />
+              </div>
+
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">3 / 9</div>
+                <img
+                  src="images/products/vsetkovrecko_zvieratka_big.JPG"
+                  style="width: 100%"
+                  alt="Všetkovrecko Lesné zvieratká"
+                />
+              </div>
+
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">4 / 9</div>
+                <img
+                  src="images/products/xmas_domceky_big.JPG"
+                  style="width: 100%"
+                  alt="Vianočné ozdoby Domčeky"
+                />
+              </div>
+
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">5 / 9</div>
+                <img
+                  src="images/products/vsetkovrecko_bw_big.jpg"
+                  style="width: 100%"
+                  alt="Všetkovrecko Black&White"
+                />
+              </div>
+
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">6 / 9</div>
+                <img
+                  src="images/products/vrecka_na_chlieb_big.JPG"
+                  style="width: 100%"
+                  alt="Vrecká na chlieb Ľanové"
+                />
+              </div>
+
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">7 / 9</div>
+                <img
+                  src="images/products/hnede_mandaly_11cm_big.JPG"
+                  style="width: 100%"
+                  alt="Meditačný vankúš Hnedé mandaly"
+                />
+              </div>
+
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">8 / 9</div>
+                <img
+                  src="images/products/bluegreen_2_big.JPG"
+                  style="width: 100%"
+                  alt="Meditačný vankúš Bluegreen"
+                />
+              </div>
+
+              <div class="mySlides" onclick="plusSlides(1)">
+                <div class="numbertext">9 / 9</div>
+                <img
+                  src="images/products/retro_mandala_big.JPG"
+                  style="width: 100%"
+                  alt="Meditačný vankúš Retro mandala"
+                />
+              </div>
+
+              <!-- Next/previous controls -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <!-- Caption text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <!-- Thumbnail image controls -->
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/vsetkovrecko_bodky_small.JPG"
+                  onclick="currentSlide(1)"
+                  alt="Všetkovrecko Pastelové bodky"
+                />
+              </div>
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/vsetkovrecko_vlocky_small.JPG"
+                  onclick="currentSlide(2)"
+                  alt="Všetkovrecko Vianočné vločky"
+                />
+              </div>
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/vsetkovrecko_zvieratka_small.JPG"
+                  onclick="currentSlide(3)"
+                  alt="Všetkovrecko Lesné zvieratká"
+                />
+              </div>
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/xmas_domceky_small.JPG"
+                  onclick="currentSlide(4)"
+                  alt="Vianočné ozdoby Domčeky"
+                />
+              </div>
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/vsetkovrecko_bw_small.jpg"
+                  onclick="currentSlide(5)"
+                  alt="Všetkovrecko Black&White"
+                />
+              </div>
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/vrecka_na_chlieb_small.JPG"
+                  onclick="currentSlide(6)"
+                  alt="Vrecká na chlieb Ľanové"
+                />
+              </div>
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/hnede_mandaly_11cm_small.JPG"
+                  onclick="currentSlide(7)"
+                  alt="Meditačný vankúš Hnedé mandaly"
+                />
+              </div>
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/bluegreen_2_small.JPG"
+                  onclick="currentSlide(8)"
+                  alt="Meditačný vankúš Bluegreen"
+                />
+              </div>
+              <div class="gal-column">
+                <img
+                  class="demo"
+                  src="images/products/retro_mandala_small.JPG"
+                  onclick="currentSlide(9)"
+                  alt="Meditačný vankúš Retro mandala"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div id="sashe_link">
+            <p>
+              <a href="https://www.sashe.sk/v.IHLE.nit" target="_blank">
+                Všetky aktuálne výrobky je možné prezrieť a zakúpiť si v mojom
+                on-line obchodíku na Sashe.sk kliknutím na tento odkaz:&nbsp
+              </a>
+              <a href="https://www.sashe.sk/v.IHLE.nit" target="_blank"
+                >v.IHLE.niť</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="referencie">
+          <h1>Referencie</h1>
+          <div class="reviews">
+            <div class="review-item" title="Ísť na recenziu">
+              <a href="https://www.sashe.sk/v.IHLE.nit?ranking" target="_blank">
+                <div class="review-image">
+                  <img
+                    src="images/review_icon_greyblue.svg"
+                    alt="Obrázok recenzie"
+                  />
+                </div>
+                <div class="description"><strong>Yasminka7</strong></div>
+                <p>
+                  Krásne vrecká, ešte krajšie, než na obrázku :) Sú aj ľahučké,
+                  takže v batožine nepridávajú váhu. Prakticky využiteľné na
+                  čokoľvek menšieho rozmeru, veľmi šikovné... :). Balíček
+                  prišiel obratom, vrecká sú prekrásne, určite odporúčam :)
+                </p>
+              </a>
+            </div>
+            <div class="review-item" title="Ísť na recenziu">
+              <a href="https://www.sashe.sk/v.IHLE.nit?ranking" target="_blank">
+                <div class="review-image">
+                  <img
+                    src="images/review_icon_greyblue.svg"
+                    alt="Obrázok recenzie"
+                  />
+                </div>
+                <div class="description"><strong>Mi.Go</strong></div>
+                <p>
+                  ***** (hodnotenie len hviedičkami - výrobok SAMSARA Meditačný
+                  vankúš - Ecru mandaly)
+                </p>
+              </a>
+            </div>
+            <div class="review-item" title="Ísť na recenziu">
+              <a href="https://www.sashe.sk/v.IHLE.nit?ranking" target="_blank">
+                <div class="review-image">
+                  <img
+                    src="images/review_icon_greyblue.svg"
+                    alt="Obrázok recenzie"
+                  />
+                </div>
+                <div class="description"><strong>korben</strong></div>
+                <p>
+                  Krásne vrecko! Veľmi kvalitná ručná pràca! :) Extrémne rýchle
+                  dodanie od veľmi príjemnej predajkyne! :) Ďakujem.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="benefity">
+          <h1>Benefity</h1>
+          <div class="benefits">
+            <div class="benefit-review">
+              <h2>Kvalitná ručná práca</h2>
+              <div class="benefit-image">
+                <img
+                  src="images/handmade_graphic_200px_black.png"
+                  alt="Kvalitná ručná práca - ikona, grafika"
+                />
+              </div>
+              <p>
+                Pokec o kvalitnej ručnej práci..Pokec o kvalitnej ručnej
+                práci..Pokec o kvalitnej ručnej práci...
+              </p>
+              <hr style="width: 50%; text-align: center; margin-bottom: 30px" />
+            </div>
+
+            <div class="benefit-review">
+              <h2>Jedinečný dizajn</h2>
+              <div class="benefit-image">
+                <img
+                  src="images/original_design_200px_vector_black.svg"
+                  alt="Jedinečný dizajn - ikona, grafika"
+                />
+              </div>
+              <p>
+                Pokec o jedinečnom dizajne...Pokec o jedinečnom dizajne...Pokec
+                o jedinečnom dizajne...
+              </p>
+              <hr style="width: 50%; text-align: center; margin-bottom: 30px" />
+            </div>
+
+            <div class="benefit-review">
+              <h2>Kvalitné materiály</h2>
+              <div class="benefit-image">
+                <img
+                  src="images/quality_fabrics_graphic_vector_black.svg"
+                  alt="Kvalitné materiály - ikona, grafika"
+                />
+              </div>
+              <p>
+                Pokec o kvalitnom materiáli...Pokec o kvalitnom
+                materiáli...Pokec o kvalitnom materiáli...
+              </p>
+              <hr style="width: 50%; text-align: center; margin-bottom: 30px" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="o_mne">
+          <h1>O mne</h1>
+          <article>
+            <p>
+              Volám sa Bronislava a žijem s rodinou na krásnych lazoch v
+              Zaježovej.
+            </p>
+            <p>
+              Začiatky mojej krajčírskej tvorby datujem do raného detstva, keď
+              som zo svojej izby počúvala vrčanie šijacieho stroja z kuchyne.
+              Tam po večeroch mama šila pre celú rodinu oblečenie a tiež
+              potrebné veci do domácnosti. Keď som chcela, pribrala ma k sebe a
+              ukazovala mi, ako šiť oblečenie pre moje bábiky.
+            </p>
+            <p>
+              V šití som nepokračovala, aj keď v neskorších rokoch mi veľakrát
+              napadla myšlienka vyrobiť si oblečenie na mieru. Asi to poznáte,
+              prídete do obchodu a ponuka vám nevyhovuje, chcete niečo
+              originálne, nie niečo, čo nosí polovica mesta, chcete, aby vám do
+              detailu sedel materiál, strih aj farba, aby ste sa v kúsku cítili
+              ozaj pohodlne. Ale na dlhé roky som v sebe túto túžbu potlačila, a
+              k šijaciemu stroju som sa dostala až ako mama na materskej.
+            </p>
+            <p>
+              Začala som doplnkami do domácnosti a jednoduchými úpravami
+              oblečenia. Kreatívny proces šitia ma pre dvoma rokmi priviedol k
+              tvorbe originálnych vrecúšok, vlastnej značky meditačných vankúšov
+              a popritom rôznych drobných projektov na mieru.
+            </p>
+            <p>
+              Až teraz som nabrala odvahu a tento rok sa púšťam do výroby
+              ľanového oblečenia, ktoré budem postupne uverejňovať aj na tejto
+              stránke.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div id="kontakt">
+          <h1>Kontakt</h1>
+          <div class="contact-container">
+            <ul class="contact-info">
+              <li>
+                <img
+                  src="images/call_icon.svg"
+                  alt="obrázok ikony telefónu"
+                  width="32"
+                  height="32"
+                />&nbsp&nbsp&nbsp+421 907 069 839
+              </li>
+              <li>
+                <img
+                  src="images/mail_icon.svg"
+                  alt="obrázok ikony mailu"
+                  width="32"
+                  height="32"
+                />&nbsp&nbsp&nbspv.ihle.nit@gmail.com
+              </li>
+              <li>
+                <img
+                  src="images/clock_icon.svg"
+                  alt="obrázok ikony hodín"
+                  width="32"
+                  height="32"
+                />
+                &nbsp&nbsp&nbsp09:00 - 17:00
+              </li>
+              <li>
+                <img
+                  src="images/address_icon.svg"
+                  alt="obrázok ikony domčeka"
+                  width="32"
+                  height="32"
+                />
+                &nbsp&nbsp&nbspDolinky 88, 962 63 Pliešovce
+              </li>
+            </ul>
+            <iframe
+              id="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6961.415880630971!2d19.224935832251678!3d48.46587902818256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47154c0f64b28a09%3A0x6ece377eb621a251!2zxaB0dWLFiG92Y2kgLSBCcm9uaXNsYXZhIMWgdHVixYhvdsOh!5e0!3m2!1ssk!2ssk!4v1675790118820!5m2!1ssk!2ssk"
+              width="500"
+              height="300"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="footerLinks" href="index.html"
+        >&COPY; 2022 - v.IHLE.niť - Bronislava Štubňová // coded by Andy</a
+      >
+    </footer>
+  </body>
+</html>
